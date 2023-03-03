@@ -11,6 +11,7 @@ import java.util.Arrays;
 
 public class sortThePeople {
     public static void main(String[] args){
+
         String[] names = {"Mary", "John", "Emma"};
         int[] heights = {180, 165, 170};
 
@@ -24,11 +25,11 @@ public class sortThePeople {
             arr[i] = new int[] {heights[i], i};
         }
         Arrays.sort(arr, (a, b) -> b[0] - a[0]);
-        String[] ans = new String[n];
+        String[] answer = new String[n];
         for (int i = 0; i < n; ++i) {
-            ans[i] = names[arr[i][1]];
+            answer[i] = names[arr[i][1]];
         }
-        return ans;
+        return answer;
     }
 }
 
